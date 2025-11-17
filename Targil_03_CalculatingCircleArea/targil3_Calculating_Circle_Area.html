@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculating Circle Area </title>
+    <style>
+        /*תבנית הסטייל: נגדיר עיצוב - מעוצבת עם פונט קליברי, רקע סגול בהיר וטקסט שחור -->*/
+
+        body{
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: rgba(219, 209, 243, 0.78);
+            color: black;
+            margin: 20px;
+        }
+        h1,h2{
+            color: #6A4C93; /* סגול יפה */
+            margin-bottom: 10px;
+        }
+        /* כיוון הטקסט משתנה אוטומטית: מימין לשמאל לעברית ומשמאל לימין לאנגלית */
+
+        html[lang="en"] body,
+        body:not([dir="rtl"]) {
+            direction: ltr;
+            text-align: left;
+        }
+        body:has(h2),
+        body[dir="rtl"],
+        p, h2 {
+            direction: rtl;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculating Circle Area </h1>
+    <br>
+    <form method="GET" action="https://lifemichael.com/temp/circleserver.php">
+        <label> Insert a radius: </label>
+        <input type="number" name="radius" required placeholder= "For example 5" step="any" >
+        <input type="submit" value="Calculate Circle Area">
+    </form>
+
+
+    <br> <!-- הורדת שורה-->
+    <h2>שטח מעגל</h2>
+    <p>על מנת לחשב שטח מעגל אנחנו צריכים לדעת את ערכו של פאי (קבוע) ואת הרדיוס של המעגל.</p>
+    <p>פאי - הוא מספר טהור המייצג את היחס הקבוע בין היקף המעגל לקוטרו.</p>
+    <p>R = רדיוס. רדיוס הוא הקטע המחבר את מרכזו של מעגל עם נקודה על היקפו.</p>
+    <p>ערכו של פאי: ∏ = 3.14159265</p>
+
+</body>
+</html>
