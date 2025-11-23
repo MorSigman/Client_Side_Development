@@ -57,26 +57,13 @@ class BankAccount{
 
 }
 
-console.log("--- מתחילים בדיקה ---");
-
-// 1. יצירת בעלים
+console.log("--- Tests ---");
 const ownerTest = new Owner("Mor", 1);
-
-// 2. יצירת חשבון בנק (נסיון תקין)
-// שימי לב: ה-ID חייב להיות 9 ספרות כדי לעבור את הבדיקה
 const accountTest = new BankAccount(ownerTest, 123456789, 1000);
-
-// בדיקה האם החשבון נוצר (אם ה-ID לא תקין, הוא לא יישמר)
 console.log("החשבון שלי:", accountTest);
-
-// 3. בדיקת הפקדה
-accountTest.deposit(500); // אמור להדפיס שהופקדו 500
-
-// 4. בדיקת משיכה
-accountTest.withdraw(200); // אמור להדפיס שנמשכו 200
-
-// 5. בדיקת שגיאות (האם ההגנות עובדות?)
+accountTest.deposit(500); 
+accountTest.withdraw(200);
 console.log("\n--- בדיקת שגיאות ---");
-accountTest.withdraw(5000); // אמור להיכשל (אין מספיק כסף)
-accountTest.balance = -50;  // אמור להיכשל (יתרה שלילית)
-accountTest.id = 123;       // אמור להיכשל (ID קצר מידי)
+accountTest.withdraw(5000); 
+accountTest.balance = -50; 
+accountTest.id = 123;     
